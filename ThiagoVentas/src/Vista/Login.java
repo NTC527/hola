@@ -2,8 +2,11 @@ package Vista;
 
 import Modelo.LoginDAO;
 
-
 public class Login extends javax.swing.JFrame {
+
+    static LoginDAO login(String correo, String pass) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
             login lg = new login();
             LoginDAO login = new LoginDAO();
     public Login() {
@@ -15,7 +18,7 @@ public class Login extends javax.swing.JFrame {
         String pass = String.valueOf(txtPass.getPassword());
         if(!"".equals(correo) || !"".equals(pass)) {
             
-            lg = login.login(correo, pass);
+            login = login = login (correo, pass);
             if (lg.getCorreo()!= null && lg.getPass() != null) {
                 Sistema sis = new Sistema();
                 sis.setVisible(true);
@@ -284,3 +287,4 @@ public class Login extends javax.swing.JFrame {
         }
     }
 }
+
